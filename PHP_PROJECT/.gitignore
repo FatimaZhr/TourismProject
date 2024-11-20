@@ -126,3 +126,13 @@ nb-configuration.xml
 /phpunit*.xml
 /.phpunit.*.cache
 
+
+/system/
+/writable/
+/vendor/
+/tests/
+/node_modules/
+.env
+*.log
+
+
