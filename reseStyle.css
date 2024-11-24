@@ -1,0 +1,86 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+body {
+  position: absolute;
+  width: 100%;
+}
+header {
+  height: 90px;
+  background-color: rgb(38, 142, 233);
+}
+.header {
+  margin-bottom: 0px;
+}
+.headcont h1 {
+  color: white;
+  text-align: center;
+  padding: 3rem;
+}
+.headcont {
+  background-image: url(../images/kotubai.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 150vh;
+  filter: brightness(0.9);
+  opacity: 0.5px;
+  position: relative; /* Needed for positioning the reservation form */
+}
+.reservation {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  width: 500px;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 10; /* Higher z-index to ensure it appears on top */
+  position: fixed; /* Enables placement over the header */
+  top: 40%; /* Adjust this to move the card vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centers the card */
+  border-radius: 10px; /* Optional: adds rounded corners */
+}
+.reservation label {
+  color: rgb(225, 159, 17);
+}
+.formCont {
+  text-align: left;
+}
+.reservation input,
+select,
+textarea {
+  width: 300px;
+  padding: 0.75rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  border: none;
+  margin: 0.5rem;
+  margin-left: 5rem;
+  padding-top: 0.5rem;
+}
+
+button {
+  position: relative;
+  width: 120px;
+  padding: 0.5px;
+  margin-left: 4rem;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid #043c4a;
+  outline: 2px solid #cf883b;
+  outline-offset: -2px;
+  font-size: 1rem;
+  color: white;
+  background-color: #cf883b;
+  cursor: pointer;
+  transition: outline-offset 200ms ease;
+}
+button:hover {
+  color: #e0ffff;
+  outline-offset: 3px;
+  background-color: #043c4a;
+}
+button:active {
+  transform: scale(0.95);
+}
