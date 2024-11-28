@@ -11,7 +11,7 @@ body {
 .page-content {
 	width: 100%;
 	margin:  0 auto;
-	background: url('/images/2.jpeg') ;
+	background: url('/images/1.jpeg') ;
 	background-repeat: no-repeat;
 	background-position: center;
     background-size: contain;
@@ -52,7 +52,7 @@ transition: all 300ms ease;
 	padding: 20px 40px;
 	position: relative;
 	width: 100%;
-	color: #e74105;
+	color: #3042e7e4;
 	box-shadow: var(--box-shadow);
 	transition: all 300ms ease;
 }
@@ -65,7 +65,7 @@ transition: all 300ms ease;
 }
 
 .text-2 span{
-	color: #e74105;
+	color: #3042e7e4;
 }
 .form-v4-content .form-left p {
 	font-size: 15px;
@@ -105,7 +105,7 @@ transition: all 300ms ease;
 }
 .form-v4-content .form-left .form-left-last input {
 	padding: 15px;
-	color: #e74105;
+	color: #3042e7e4;
 	
 }
 .form-v4-content .form-detail {
@@ -114,7 +114,7 @@ transition: all 300ms ease;
 	width: 100%;
 }
 .form-v4-content .form-detail h2 {
-	color: #e74105;
+	color: #3042e7e4;
 }
 .form-v4-content .form-detail .form-group {
 	display: flex;
@@ -226,7 +226,7 @@ transition: all 300ms ease;
     -ms-box-sizing: border-box;
 }
 .form-v4-content .form-detail .form-row .input-text input:focus {
-	border: 1px solid #2764e7;
+	border: 1px solid #;
 }
 .form-v4-content .form-detail .form-row select:focus {
 	border: 1px solid #2764e7;
@@ -234,7 +234,7 @@ transition: all 300ms ease;
 .form-v4-content .form-detail .form-row  .input-text:focus {
 	border: 1px solid #2764e7;
 }
-.form-v4-content .form-detail .form-checkbox {
+.form-v4-content .form-detail .form-check2764e7box {
 	margin-top: 1px;
 	position: relative;
 	display: flex;
@@ -251,7 +251,7 @@ transition: all 300ms ease;
 	position: absolute;
     opacity: 0;
 	display: flex;
-	border-color: #e74105;
+	border-color: #3042e7e4;
 	text-decoration: none;
 }
 .form-v4-content .form-detail .form-checkbox .checkmark {
@@ -272,8 +272,8 @@ transition: all 300ms ease;
    	top: 1px;
     width: 3px;
     height: 8px;
-    border: 1px solid #e74105;
-	border-color: #e74105;
+    border: 1px solid #3042e7e4;
+	border-color: #3042e7e4;
     border-width: 0 2px 2px 0;
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -293,11 +293,11 @@ transition: all 300ms ease;
 }
 .form-v4-content .form-detail .form-checkbox .text {
 	font-weight: 700;
-	color: #e74105;
+	color: #3042e7e4;
 	text-decoration: none;
 }
 .form-v4-content .form-detail .register {
-	background: #e74105;
+	background: #3042e7e4;
 	border: none;
 	border-radius: 6px;
 	width: 130px;

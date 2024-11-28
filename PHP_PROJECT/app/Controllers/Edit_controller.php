@@ -7,68 +7,49 @@ use App\Models\TouristeModel;
 
 class Edit_controller extends BaseController
 {
-
-
-    public function index()
+    public function view_Edit_touriste()
     {
         return view('login\edit_touriste');
     }
 
 
-    public function editForm($id)
-{
-    $model = new \App\Models\TouristeModel();
-    $touriste = $model->find($id);
-
-    if (!$touriste) {
-        return redirect()->to('/error')->with('error', 'Touriste non trouvé.');
-    }
-
-    
-    return view('login/edit_touriste', ['touriste' => $touriste]);
-}
-
-
-    public function updateTouriste()
+    public function view_touriste()
     {
-        $model = new TouristeModel();
-        
-        $id = $this->request->getPost('touriste_id');
-        
-        // Validation des données (vous pouvez ajuster les règles selon vos besoins)
-        $validation = $this->validate([
-            'first_name' => 'required|min_length[2]',
-            'last_name'  => 'required|min_length[2]',
-            'email'      => 'required|valid_email',
-            'phone'      => 'required|numeric',
-            'city'       => 'required',
-            'pays'       => 'required'
-        ]);
+        $touristeId = $this->request->getGet('id'); // Récupère l'ID depuis l'URL
 
-        if (!$validation) {
-            return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+        if (!$touristeId) {
+            return redirect()->to('/')->with('error', 'Aucun ID fourni');
         }
 
-        // Préparer les données pour la mise à jour
+        $model = new TouristeModel();
+        $touriste = $model->find($touristeId); // Cherche les données du touriste
+
+        if (!$touriste) {
+            return redirect()->to('/')->with('error', 'Touriste non trouvé');
+        }
+
+        return view('login/edit_touriste', ['touriste' => $touriste]);
+    }
+
+
+    public function update_touriste()
+    {
+        $model = new TouristeModel();
+        $touristeId = $this->request->getPost('touriste_id');
+
         $data = [
-    'nom' => $this->request->getPost('first_name'),
-    'prenom' => $this->request->getPost('last_name'),
-    'email' => $this->request->getPost('email'),
-    'telephone' => $this->request->getPost('phone'),
-    'ville' => $this->request->getPost('city'),
-    'pays' => $this->request->getPost('pays'),
-    'sexe' => $this->request->getPost('gender'),
-    'updated_at' => date('Y-m-d H:i:s')  // Correct format for DATETIME or TIMESTAMP
-];
+            'nom' => $this->request->getPost('first_name'),
+            'prenom' => $this->request->getPost('last_name'),
+            'telephone' => $this->request->getPost('phone'),
+            'sexe' => $this->request->getPost('gender'),
+            'ville' => $this->request->getPost('city'),
+            'pays' => $this->request->getPost('pays'),
+            'email' => $this->request->getPost('your_email'),
+        ];
 
+        $model->update($touristeId, $data);
 
-
-      
-
-        // Mise à jour dans la base de données
-        $model->update($id, $data);
-
-        return redirect()->to('/touristes')->with('success', 'Touriste mis à jour avec succès.');
+        return redirect()->to('/')->with('success', 'Touriste mis à jour avec succès');
     }
 }
 

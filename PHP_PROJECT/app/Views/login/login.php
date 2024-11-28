@@ -14,13 +14,19 @@
     <link rel="stylesheet" href="css/sign.css"/>
 </head>
 <body class="form-v4">
+
 	<div class="page-content">
 		<div class="form-v4-content">
+
 			<div class="form-left">
-				<h2>INFOMATION</h2>
-				<p class="text-1">Lorem ipsum dolor  sit amet, consectetur adipiscing elitelit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
-				<p class="text-2"><span>Eu ultrices:</span> Vitae auctor eu augue ut.elit elit   elit Malesuada nunc vel risus commodo viverra. Praesent elementum facilisis leo vel.</p>
-				<div class="form-left-last">
+			<h2>Welcome Back!</h2>
+<p class="text-1">
+    Access your account to continue planning your dream vacations, managing bookings, and exploring personalized recommendations.
+</p>
+<p class="text-2">
+    <span>Stay Connected:</span> Log in to stay updated on exclusive deals, offers, and your travel itinerary. Your next adventure awaits!
+</p>
+<div class="form-left-last">
 				<form action="<?= base_url('sign') ?>" method="get">
         <input type="submit" name="account" class="account" value="Sign in">
     </form>
@@ -39,7 +45,7 @@
 				</div>
 
 				<div class="form-checkbox">
-					<label class="container"><a href="#" class="text">Forgot password</a>
+					<label class="container"><a href="<?= base_url('/forgot_password') ?>" class="text">Forgot password</a>
 					  	<input type="checkbox" name="checkbox">
 					</label>
 				</div>

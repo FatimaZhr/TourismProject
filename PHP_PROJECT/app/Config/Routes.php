@@ -37,14 +37,15 @@ $routes->get('dashboard', 'AnalyticsController::index');
 $routes->get('sign', 'Sign::view_sign');
 $routes->post('sign/register', 'Sign::register'); // Traite les données du formulaire
 $routes->get('login', 'Login::view_login');
+$routes->get('forgot_password', 'Login::view_forgotpwd');
 
 
 // afficher touriste
 $routes->get('/touristes', 'Touriste::index');
 $routes->get('/touriste', 'Touriste::index');
-$routes->get('/touriste/delete/(:num)', 'Touriste::deleteTouriste/$1');
-$routes->get('/edit_touriste/(:num)', 'Edit_controller::edit/$1');
-$routes->get('/edit_touriste', 'Edit_controller::index');
+$routes->get('/edit_touriste', 'Edit_controller::view_touriste');
+$routes->post('/update_touriste', 'Edit_controller::update_touriste');
+
 
 
 // guide

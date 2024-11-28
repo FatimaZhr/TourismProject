@@ -10,4 +10,7 @@ class Login extends BaseController
         return view('login/login');
        }
 
+       public function view_forgotpwd(){
+              return view('login/forgot_password');
+             }
 }

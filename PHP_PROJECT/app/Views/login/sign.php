@@ -38,10 +38,13 @@
 	<div class="page-content">
 		<div class="form-v4-content">
 			<div class="form-left">
-				<h2>INFOMATION</h2>
-				<p class="text-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Et molestie ac feugiat sed. Diam volutpat commodo.</p>
-				<p class="text-2"><span>Eu ultrices:</span> Vitae auctor eu augue ut. Malesuada nunc vel risus commodo viverra. Praesent elementum facilisis leo vel.</p>
-				<div class="form-left-last">
+            <h2>Join Us Today!</h2>
+<p class="text-1">
+    Create your account to unlock a world of exciting travel opportunities, tailored experiences, and seamless trip planning.
+</p>
+<p class="text-2">
+    <span>Why Sign Up:</span> Gain access to exclusive perks, personalized recommendations, and easy booking options. Start your journey with us now!
+</p><div class="form-left-last">
 
   
                 <form action="<?= base_url('login') ?>" method="get">
@@ -50,26 +53,6 @@
 
 				</div>
 			</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
