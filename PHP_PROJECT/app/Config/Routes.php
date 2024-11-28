@@ -24,7 +24,9 @@ $routes->get('home1/casa', 'casa::index');
 $routes->get('home1/marzouga', 'marzouga::index');
 $routes->get('home1/fez', 'fez::index');
 
-
+//home
+$routes->get('/home1', 'Home1::view_login');
+$routes->get('/home1', 'Home1::view_sing');
 
 $routes->get('/', 'Home::index');
 //dashboard

@@ -48,10 +48,10 @@
             <span>&#9658;</span> Watch the video
           </button>
           <div class="btn">
-            <a href="http://" target="_blank" rel="noopener noreferrer"
+            <a href="<?= base_url('login') ?>" target="_blank" rel="noopener noreferrer"
               >log in</a
             >
-            <a href="http://" target="_blank" rel="noopener noreferrer"
+            <a href="<?= base_url('sign') ?>" target="_blank" rel="noopener noreferrer"
               >sing in</a
             >
           </div>
