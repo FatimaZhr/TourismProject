@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Form-v4 by Colorlib</title>
-<link rel="stylesheet" href="css/edit_trs.css"/>
+<link rel="stylesheet" href="/css/edit_trs.css"/>
 </head>
 <body class="form-v4">
 	<div class="page-content">
@@ -46,6 +46,7 @@
 </div>
 
 
+
     <div class="form-row">
         <label for="date_reservation">Date of reservation</label> 
         <input type="text" name="date_reservation" id="date_reservation" class="input-text" value="<?= $reservation['date_reservation'] ?>" >
@@ -67,13 +68,12 @@
         <input type="text" name="attraction_name" id="attraction_name" class="input-text" value="<?= $reservation['statut'] ?>" >
     </div>
 
-    <div class="form-row form-row-1">
-   <select class="select" name="attraction_id" id="attraction_id" class="input-text">
-    <option value="1">Eiffel Tower</option>
-    <option value="2" selected>Louvre Museum</option>
-</select>
+    <div class="form-row">
+        <label for="attraction_name">Attraction</label>
+        <input type="text" name="attraction_id" id="attraction_id" class="input-text" value="<?= $reservation['attraction_id'] ?>" >
+    </div>
 
-   </div>
+   
 
 
     <div class="form-row-last">

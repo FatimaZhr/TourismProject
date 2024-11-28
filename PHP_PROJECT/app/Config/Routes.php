@@ -67,7 +67,8 @@ $routes->get('/reservations', 'ReservationsController::index');
 $routes->get('/reservation/delete/(:num)', 'ReservationsController::deleteReservation/$1');
 $routes->get('/edit_reservation', 'Edit_controller::view_reservation');
 $routes->post('/update_reservation', 'Edit_controller::update_reservation');
-
+$routes->get('/edit_reservation/(:num)', 'Edit_controller::view_reservation/$1');
+$routes->get('/edit_reservation/(:num)', 'Edit_controller::view_reservation/$1');
 
 
 

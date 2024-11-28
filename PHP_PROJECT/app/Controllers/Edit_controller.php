@@ -122,54 +122,60 @@ public function update_event()
 }
 
 
-public function view_reservation()
+public function view_reservation($id)
 {
-    $reservationId = $this->request->getGet('id'); // Get the reservation ID
     $reservationModel = new \App\Models\ReservationsModel();
-    $touristeModel = new \App\Models\TouristeModel();
+    $touristeModel = new \App\Models\TouristeModel(); // Assuming you have a model for tourists
 
-    // Fetch the reservation details
-    $reservation = $reservationModel->find($reservationId);
+    // Fetch the reservation by its ID
+    $reservation = $reservationModel->find($id);
+
+    if (!$reservation) {
+        throw new \CodeIgniter\Exceptions\PageNotFoundException('Reservation not found.');
+    }
 
     // Fetch all tourists
     $touristes = $touristeModel->findAll();
 
-    // Pass data to the view
+    // Pass the data to the view
     return view('login/edit_reservation', [
         'reservation' => $reservation,
-        'touristes' => $touristes,
+        'touristes'   => $touristes
     ]);
 }
 
 
+
+
+
 public function update_reservation()
 {
+    $id = $this->request->getPost('id');
+    if (!$id) {
+        throw new \CodeIgniter\Exceptions\PageNotFoundException('ID de réservation manquant');
+    }
+
     $ReservationsModel = new \App\Models\ReservationsModel();
 
-    // Retrieve form data
+    // Données récupérées depuis le formulaire
     $data = [
         'titre_reservation' => $this->request->getPost('name_rese'),
         'touriste_id'       => $this->request->getPost('touriste_id'),
         'date_reservation'  => $this->request->getPost('date_reservation'),
         'nombre_personnes'  => $this->request->getPost('nombre_personnes'),
         'prix_total'        => $this->request->getPost('prix_total'),
-        'statut'            => $this->request->getPost('attraction_name'),
-        'attraction_id'     => $this->request->getPost('attraction_id'), // Add attraction ID
+        'statut'            => $this->request->getPost('statut'),
+        'attraction_id'     => $this->request->getPost('attraction_id'),
     ];
 
-    $id = $this->request->getPost('id');
+    // Mettez à jour les données dans la base de données
+    $ReservationsModel->update($id, $data);
 
-    if (!$id) {
-        return redirect()->back()->with('error', 'ID de réservation manquant.');
-    }
-
-    // Update reservation
-    if ($ReservationsModel->update($id, $data)) {
-        return redirect()->to(base_url('reservations'))->with('success', 'Réservation mise à jour avec succès.');
-    } else {
-        return redirect()->back()->with('error', 'Erreur lors de la mise à jour.');
-    }
+    // Redirigez après la mise à jour
+    return redirect()->to(base_url('reservations'))->with('success', 'Réservation mise à jour avec succès');
 }
+
+
 
 
 

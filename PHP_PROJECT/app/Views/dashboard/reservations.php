@@ -63,7 +63,7 @@
         <td><?= esc($reservation['statut']) ?></td>
         <td><?= esc($reservation['attraction_name']) ?></td>
         <td class="ddd">
-        <form action="<?= base_url('edit_reservation') ?>" method="get">
+        <form action="<?= base_url('edit_reservation/' . $reservation['id']) ?>"" method="get">
     <input type="hidden" name="id" value="<?= $reservation['id'] ?>">
     <button class="status Edit">
         <i class="fa-regular fa-pen-to-square"></i> Edit
