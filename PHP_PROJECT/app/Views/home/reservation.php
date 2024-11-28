@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/reseStyle.css'); ?>">
 </head>
 <body>
-   
+
   <div class="header">
     <div class="headcont">
       <h1>Book Your Experience</h1>

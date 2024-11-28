@@ -63,9 +63,12 @@
         <td><?= esc($reservation['statut']) ?></td>
         <td><?= esc($reservation['attraction_name']) ?></td>
         <td class="ddd">
-            <button class="status Edit">
-                <i class="fa-regular fa-pen-to-square"> </i> &nbsp; Edit
-            </button>
+        <form action="<?= base_url('edit_reservation') ?>" method="get">
+    <input type="hidden" name="id" value="<?= $reservation['id'] ?>">
+    <button class="status Edit">
+        <i class="fa-regular fa-pen-to-square"></i> Edit
+    </button>
+</form>
             </button>
 <button class="status Delete" onclick="deleteReservation(<?= esc($reservation['id']) ?>)">
     <span class="material-symbols-outlined">delete</span> Delete

@@ -58,7 +58,12 @@
             <td><?= esc($guide['pays']) ?></td>
             <td><?= esc($guide['adresse']) ?></td>
            <td class="ddd">
-               <button class="status Edit"> <i class="fa-regular fa-pen-to-square"> </i> &nbsp; Edit</button>
+           <form action="<?= base_url('edit_guide') ?>" method="get">
+    <input type="hidden" name="id" value="<?= $guide['id_guide'] ?>">
+    <button class="status Edit">
+        <i class="fa-regular fa-pen-to-square"></i> Edit
+    </button>
+</form>
                <button class="status Delete" onclick="deleteGuide(<?= esc($guide['id_guide']) ?>)">
     <span class="material-symbols-outlined">delete</span> Delete
 </button>        </td>

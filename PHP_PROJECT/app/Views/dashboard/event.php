@@ -68,9 +68,12 @@
             <td><?= esc($evenement['status']); ?></td>
             <td><?= esc($evenement['capacite']); ?></td>
             <td class="ddd">
-                <button class="status Edit">
-                    <i class="fa-regular fa-pen-to-square"> </i> &nbsp; Edit
-                </button>
+            <form action="<?= base_url('edit_event') ?>" method="get">
+    <input type="hidden" name="id" value="<?= $evenement['id'] ?>">
+    <button class="status Edit">
+        <i class="fa-regular fa-pen-to-square"></i> Edit
+    </button>
+</form>
                 <button class="status Delete" onclick="deleteEvent(<?= esc($evenement['id']) ?>)">
     <span class="material-symbols-outlined">delete</span> Delete
 </button>

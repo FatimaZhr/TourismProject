@@ -43,6 +43,7 @@ $routes->get('forgot_password', 'Login::view_forgotpwd');
 // afficher touriste
 $routes->get('/touristes', 'Touriste::index');
 $routes->get('/touriste', 'Touriste::index');
+$routes->get('/touriste/delete/(:num)', 'Touriste::deleteTouriste/$1');
 $routes->get('/edit_touriste', 'Edit_controller::view_touriste');
 $routes->post('/update_touriste', 'Edit_controller::update_touriste');
 
@@ -51,20 +52,22 @@ $routes->post('/update_touriste', 'Edit_controller::update_touriste');
 // guide
 $routes->get('guide', 'Guide::index');
 $routes->get('/guide/delete/(:num)', 'Guide::deleteGuide/$1');
-
+$routes->get('/edit_guide', 'Edit_controller::view_guide');
+$routes->post('/update_guide', 'Edit_controller::update_guide');
 
 // event
 $routes->get('event', 'EvenementsController::index');
 $routes->get('events', 'EvenementsController::index');
 $routes->get('/event/delete/(:num)', 'EvenementsController::deleteEvent/$1');
-
+$routes->get('/edit_event', 'Edit_controller::view_event');
+$routes->post('/update_event', 'Edit_controller::update_event');
 
 // reservation
 $routes->get('/reservations', 'ReservationsController::index');
 $routes->get('/reservation/delete/(:num)', 'ReservationsController::deleteReservation/$1');
+$routes->get('/edit_reservation', 'Edit_controller::view_reservation');
+$routes->post('/update_reservation', 'Edit_controller::update_reservation');
 
-
-$routes->get('message', 'Message::index');
 
 
 

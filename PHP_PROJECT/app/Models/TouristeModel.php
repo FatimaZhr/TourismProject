@@ -6,8 +6,8 @@ use CodeIgniter\Model;
 
 class TouristeModel extends Model
 {
-    protected $table = 'touriste'; // Nom de la table
-    protected $primaryKey = 'touriste_id'; // Clé primaire
+    protected $table = 'touriste';
+    protected $primaryKey = 'touriste_id'; 
     protected $allowedFields = [
         'nom', 
         'prenom' ,
@@ -19,9 +19,7 @@ class TouristeModel extends Model
         'adresse',
         'nationalite',
         'preferences',
-    ]; // Colonnes modifiables
-
-    // Activez les timestamps si nécessaire
+    ];
     protected $useTimestamps = false;
 
     public function countAll()
@@ -29,7 +27,6 @@ class TouristeModel extends Model
         return $this->countAllResults();
     }
 
-    // Method to get tourist guides added in the last 24 hours
     public function getTouristesLast24h()
     {
         $db = \Config\Database::connect();
@@ -51,14 +48,12 @@ class TouristeModel extends Model
 
     public function delete($id = null, bool $purge = false)
 {
-    // Suppression basée sur l'ID fourni
     if ($id !== null) {
         return $this->db->table('touriste')->delete(['touriste_id' => $id]);
     }
 
     return false; // Pas d'ID fourni, rien à supprimer
 }
-
 
 
 
