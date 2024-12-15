@@ -17,21 +17,22 @@
     <header class="city-header">
       <img
 
-        src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>" 
+        src="<?= base_url('assets/images/51.jpg'); ?>" 
         alt="Marrakech"
         class="banner-image"
       />
       <div class="header-text">
-        <h1>Casa Blanca</h1>
+        <h1>Chefchaouen</h1>
         <p>Discover the beauty, history, and vibrant life of chefchaouen.</p>
         <div class="btn">
-          <button>reservation</button>
+          <button id="reser">reservation</button>
+          <form action="<?=base_url('home1')?>">
           <button id="home">back to cities</button>
-        </div>
+          </form>        </div>
       </div>
     </header>
 
-    <div class="h1"><h1>Top Atractive places in Marrakech</h1></div>
+    <div class="h1"><h1>Top Atractive places in Chefchaouen</h1></div>
 
     <!-- Main Content Section -->
     <div class="container">
@@ -64,19 +65,19 @@
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>"  style="width: 100%" />
+            <img src="<?= base_url('assets/images/Marokko.jpg'); ?>"  style="width: 100%" />
             <div class="text">Caption Text</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="<?= base_url('assets/images/atay.jpg'); ?>" src="images/atay.jpg" style="width: 100%" />
+            <img src="<?= base_url('assets/images/sigin.jpg'); ?>" src="images/atay.jpg" style="width: 100%" />
             <div class="text">Caption Two</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="<?= base_url('assets/images/kotubai.jpg'); ?>" style="width: 100%" />
+            <img src="<?= base_url('assets/images/8f.jpg'); ?>" style="width: 100%" />
             <div class="text">Caption Three</div>
           </div>
 
@@ -95,27 +96,27 @@
   <div class="activity-grid">
     <!-- Activity 1 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 1" />
+      <img src="<?= base_url('assets/images/7a.jpg'); ?>" alt="Activity 1" />
       <div class="activity-info">
         <h3>Activity 1</h3>
-        <p>Explore the stunning Medina and its historic souks.</p>
+        <p>village of Chefchaouen.</p>
         <button class="activity-btn" data-target="activity-details-1">Learn More</button>
       </div>
     </div>
 
     <!-- Activity 2 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 2" />
+      <img src="<?= base_url('assets/images/d9.jpg'); ?>" alt="Activity 2" />
       <div class="activity-info">
         <h3>Activity 2</h3>
-        <p>Discover the vibrant streets of Chefchaouen.</p>
+        <p>Discover the cuisine of Chefchaouen.</p>
         <button class="activity-btn" data-target="activity-details-2">Learn More</button>
       </div>
     </div>
 
     <!-- Activity 3 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/souk.jpg'); ?>" alt="Activity 3" />
+      <img src="<?= base_url('assets/images/akchor.jpg'); ?>" alt="Activity 3" />
       <div class="activity-info">
         <h3>Activity 3</h3>
         <p>Visit the enchanting Jardin Majorelle.</p>
@@ -128,24 +129,25 @@
 <!-- Overlays for Activity Details -->
 <div id="activity-details-1" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 1 Details</h3>
-    <p>More information about Activity 1...</p>
+    <h3>village of Chefchaouen</h3>
+    <p>Visit the beautiful and unique village of Chefchaouen from Fez on a small-group tour that leaves you free time to explore the blue-hued architecture, historic center, and quaint cafes of the Rif Mountain community. This tour includes transportation in the comfort of an air-conditioned vehicle, with convenient pickup and drop-off at Fez hotels..</p>
     <button onclick="hideDetails('activity-details-1')">Close</button>
   </div>
 </div>
 
 <div id="activity-details-2" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 2 Details</h3>
-    <p>More information about Activity 2...</p>
+    <h3>Moroccan cuisine..</h3>
+    <p>Discover the vibrant tapestry of Moroccan cuisine through our immersive cooking classes that promise not just a meal, but an unforgettable journey through the rich flavors and traditions of Moroccan cuisine.
+    Immerse yourself in the vibrant atmosphere of Moroccan cuisine, where every dish tells a story. Learn the art of balancing flavors, mastering traditional spice blends, and creating visually stunning presentations that capture the essence of Moroccan cuisine.</p>
     <button onclick="hideDetails('activity-details-2')">Close</button>
   </div>
 </div>
 
 <div id="activity-details-3" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 3 Details</h3>
-    <p>More information about Activity 3...</p>
+    <h3>Akchour Waterfalls...</h3>
+    <p>For a taste of the Moroccan countryside, head to the Akchour Waterfalls outside Chefchaouen. Join a guided hike through the Rif Mountains to discover these magnificent waterfalls and turquoise waters.</p>
     <button onclick="hideDetails('activity-details-3')">Close</button>
   </div>
 </div>
@@ -196,6 +198,13 @@
         let kech = document.getElementById("home");
         kech.addEventListener("click", function () {
           window.location.assign("home1");
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let res = document.getElementById("reser");
+        res.addEventListener("click", function () {
+          window.location.assign("reservation");
         });
       });
     </script>

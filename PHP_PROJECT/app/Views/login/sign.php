@@ -1,239 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Form-v4 by Colorlib</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
-	<link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
-	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
-	<style>
-        .form-detail {
-            width: 300px;
-            margin: auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background: #f9f9f9;
-        }
-        .form-row, .form-row-last {
-            margin-bottom: 15px;
-        }
-        .input-text {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-        }
-        .register {
-            background: #007BFF;
-            color: #fff;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
-    <link rel="stylesheet" href="css/style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="<?= base_url('assets/css/sign.css'); ?>" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 </head>
-<body class="form-v4">
-	<div class="page-content">
-		<div class="form-v4-content">
-			<div class="form-left">
-            <h2>Join Us Today!</h2>
-<p class="text-1">
-    Create your account to unlock a world of exciting travel opportunities, tailored experiences, and seamless trip planning.
-</p>
-<p class="text-2">
-    <span>Why Sign Up:</span> Gain access to exclusive perks, personalized recommendations, and easy booking options. Start your journey with us now!
-</p><div class="form-left-last">
 
-  
-                <form action="<?= base_url('login') ?>" method="get">
-        <input type="submit" name="account" class="account" value="Sign in">
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Touriste</title>
+</head>
+<body>
+<?php if (session()->getFlashdata('error')): ?>
+    <div class="error-message" style="color: red; margin-bottom: 1rem;">
+        <?= session()->getFlashdata('error') ?>
+    </div>
+<?php endif; ?>
+
+    <div class="body">
+    <div class="form">
+    <h1>please enter your informations</h1>
+    <p>fill in all fields(all fields are )required</p>
+    <div class="formCont">
+    <form action="<?= site_url('TouristeController/store') ?>" method="post">
+        <label for="nom">First Name:</label>
+        <input type="text" name="nom" id="nom" placeholder="enter your first name" required><br>
+
+        <label for="prenom">Least Name:</label>
+        <input type="text" name="prenom" id="prenom" placeholder="enter your least name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="enter your email" required><br>
+
+        <label for="sexe">Sexe:</label>
+        <select name="sexe" id="sexe" required>
+            <option value="Homme">Male</option>
+            <option value="Femme">Female</option>
+        </select><br>
+
+        <label for="telephone">Phone Number :</label>
+        <input type="tel" name="telephone" id="telephone" placeholder="enter your phone number" required><br>
+
+        <label for="ville">City:</label>
+        <input type="text" name="ville" id="ville" placeholder="enter your city" required><br>
+
+        <label for="pays">Country:</label>
+        <input type="text" name="pays" id="pays" placeholder="enter your Country" required><br>
+
+        <label for="nationalite">Nationality:</label>
+        <input type="text" name="nationalite" id="nationalite" placeholder="enter your Notionality" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" placeholder="enter your password" required><br>
+
+
+        <label for="preferences">Preferences:</label>
+        <textarea name="preferences" id="preferences" placeholder="enter your Preferences" ></textarea><br>
+<div class="btn">
+        <button type="submit">submit</button>
+          <button type="reset">reset</button>
+        <button id="reser" type="submit">back home</button>
+        </div>
     </form>
-
-				</div>
-			</div>
-
-
-
-			<form class="form-detail" method="post" id="myform">
-    <h2>Sign up</h2>
-
-    <!-- Form Fields -->
-    <div class="form-group">
-        <div class="form-row form-row-1">
-            <label for="first_name">First Name</label>
-            <input type="text" name="first_name" id="first_name" class="input-text" required>
-        </div>
-        <div class="form-row form-row-1">
-            <label for="last_name">Last Name</label>
-            <input type="text" name="last_name" id="last_name" class="input-text" required>
-        </div>
+</div>
     </div>
-
-    <div class="form-group">
-        <div class="form-row form-row-1">
-            <label for="phone">Phone</label>
-            <input type="text" name="phone" id="phone" class="input-text" required>
-        </div>
-        
-        <div class="form-row form-row-1">
-            <label for="gender">Gender</label>
-            <select name="gender" id="gender" class="select" required>
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-            </select>
-        </div>
     </div>
-
-    <div class="form-group">
-        <div class="form-row form-row-1">
-            <label for="city">City</label>
-            <input type="text" name="city" id="city" class="input-text" required>
-        </div>
-        <div class="form-row form-row-1">
-            <label for="pays">Pays</label>
-            <input type="text" name="pays" id="pays" class="input-text" required>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="form-row">
-            <label for="your_email">Email</label>
-            <input type="email" name="your_email" id="your_email" class="input-text" required>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="form-row form-row-1">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" class="input-text" required>
-        </div>
-        <div class="form-row form-row-1">
-            <label for="confirm_password">Confirm Password</label>
-            <input type="password" name="confirm_password" id="confirm_password" class="input-text" required>
-        </div>
-    </div>
-
-    <div class="form-checkbox">
-        <label class="container"><p>I agree to the <a href="#" class="text">Terms and Conditions</a></p>
-            <input type="checkbox" name="checkbox" required>
-            <span class="checkmark"></span>
-        </label>
-    </div>
-
-    <div class="form-row-last">
-        <input type="submit" name="register" class="register" value="Sign up">
-    </div>
-</form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-	<script>
-    // Avoid form submission during demo
-    jQuery.validator.setDefaults({
-        debug: true,
-        success: function(label) {
-            label.attr('id', 'valid');
-        },
-    });
-
-    // Validate all forms with the class `form-detail`
-    $(".form-detail").each(function() {
-        $(this).validate({
-            rules: {
-                first_name: {
-                    required: true,
-                    pattern: "[A-Za-z\\s]+"
-                },
-                last_name: {
-                    required: true,
-                    pattern: "[A-Za-z\\s]+"
-                },
-                phone: {
-                    required: true,
-                    digits: true
-                },
-                city: {
-                    required: true,
-                    pattern: "[A-Za-z\\s]+"
-                },
-                pays: {
-                    required: true,
-                    pattern: "[A-Za-z\\s]+"
-                },
-                your_email: {
-                    required: true,
-                    email: true
-                },
-                password: {
-                    required: true,
-                },
-                comfirm_password: {
-                    required: true,
-                    equalTo: "#password"
-                },
-                checkbox: {
-                    required: true
-                }
-            },
-            messages: {
-                first_name: {
-                    required: "Please enter your first name",
-                    pattern: "Only letters and spaces are allowed"
-                },
-                last_name: {
-                    required: "Please enter your last name",
-                    pattern: "Only letters and spaces are allowed"
-                },
-                phone: {
-                    required: "Please enter your phone",
-                    digits: "Please enter only digits"
-                },
-               
-                pays: {
-                    required: "Please enter your country",
-                    pattern: "Only letters and spaces are allowed"
-                },
-                your_email: {
-                    required: "Please provide an email",
-                    email: "Please enter a valid email address"
-                },
-                password: {
-                    required: "Please enter a password"
-                },
-                comfirm_password: {
-                    required: "Please confirm your password",
-                    equalTo: "Passwords do not match"
-                },
-                checkbox: {
-                    required: "You must agree to the terms and conditions"
-                }
-            }
+    <script src="<?= base_url('assets/script/script.js'); ?>"></script>
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+        let res = document.getElementById("reser");
+        res.addEventListener("click", function () {
+          window.location.assign("home1");
         });
-    });
-
-	
+      });
 </script>
-
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</body>
 </html>

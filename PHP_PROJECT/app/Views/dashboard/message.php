@@ -1,15 +1,11 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Convert | Export html Table to CSV & EXCEL File</title>
-
 </head>
-
 <body>
     <main class="table" id="customers_table">
         <section class="table__header">
@@ -178,7 +174,5 @@
         </section>
     </main>
     <script src="js/script.js"></script>
-
 </body>
-
 </html>

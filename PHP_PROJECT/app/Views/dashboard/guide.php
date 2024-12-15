@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
    
 </head>
-
 <body>
     <main class="table" id="guide_table">
         <section class="table__header">
@@ -58,12 +56,7 @@
             <td><?= esc($guide['pays']) ?></td>
             <td><?= esc($guide['adresse']) ?></td>
            <td class="ddd">
-           <form action="<?= base_url('edit_guide') ?>" method="get">
-    <input type="hidden" name="id" value="<?= $guide['id_guide'] ?>">
-    <button class="status Edit">
-        <i class="fa-regular fa-pen-to-square"></i> Edit
-    </button>
-</form>
+               <button class="status Edit"> <i class="fa-regular fa-pen-to-square"> </i> &nbsp; Edit</button>
                <button class="status Delete" onclick="deleteGuide(<?= esc($guide['id_guide']) ?>)">
     <span class="material-symbols-outlined">delete</span> Delete
 </button>        </td>
@@ -85,22 +78,15 @@ function deleteGuide(id) {
                 </thead>
                 <tbody>
                 
-
                 </tbody>
             </table>
         </section>
-
         <a  href="\dashboard" class=" btn"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;log out</a>
     </main>
-
     <script src="js/guide.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-
-
 </body>
-
 </html>

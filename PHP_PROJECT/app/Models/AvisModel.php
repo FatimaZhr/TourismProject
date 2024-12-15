@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Modules\Avis\Models;
-
 use CodeIgniter\Model;
-
 class AvisModel extends Model
 {
     protected $table = 'Avis';

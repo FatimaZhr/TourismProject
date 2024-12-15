@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Models;
-
 use CodeIgniter\Model;
-
 class AttractionModel extends Model
 {
     protected $table = 'attractions'; // Nom de la table
@@ -14,7 +11,6 @@ class AttractionModel extends Model
         'horaires',
         'tarifs',
     ]; // Colonnes modifiables
-
     // Activez les timestamps si nécessaire
     protected $useTimestamps = false;
 }

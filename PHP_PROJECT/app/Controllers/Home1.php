@@ -9,22 +9,23 @@ class Home1 extends BaseController
     
        return view('home/home1');
 
-    }
-
-    public function view_sing(): string
+    } public function view()
     {
     
-       return view('login/sign');
+       return view('home/home1');
 
     }
+//     public function kech()
+// {
+//     return view('home1/kech');
+// }
+// public function chefn()
+// {
+//     return view('home1/chefn');
+// }
 
-    public function view_login(): string
-    {
-    
-       return view('login/login');
+// In Home1 Controller
 
-    }
-    
 
 
 }

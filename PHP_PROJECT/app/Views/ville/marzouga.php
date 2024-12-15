@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chefchaouen - City Attractions</title>
+    <title>MARZOUGA - City Attractions</title>
 
     <link
       rel="stylesheet"
@@ -17,21 +17,22 @@
     <header class="city-header">
       <img
 
-        src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>" 
+        src="<?= base_url('assets/images/m1.jpg'); ?>" 
         alt="Marrakech"
         class="banner-image"
       />
       <div class="header-text">
-        <h1>Casa Blanca</h1>
-        <p>Discover the beauty, history, and vibrant life of chefchaouen.</p>
+        <h1>Marzouka</h1>
+        <p>Discover the beauty, history, and vibrant life of marzouga.</p>
         <div class="btn">
-          <button>reservation</button>
+          <button id="reser">reservation</button>
+          <form action="<?=base_url('home1')?>">
           <button id="home">back to cities</button>
-        </div>
+          </form>        </div>
       </div>
     </header>
 
-    <div class="h1"><h1>Top Atractive places in Marrakech</h1></div>
+    <div class="h1"><h1>Top Atractive places in Marrzouga</h1></div>
 
     <!-- Main Content Section -->
     <div class="container">
@@ -64,19 +65,19 @@
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>"  style="width: 100%" />
+            <img src="<?= base_url('assets/images/m2.jpg'); ?>"  style="width: 100%" />
             <div class="text">Caption Text</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="<?= base_url('assets/images/atay.jpg'); ?>" src="images/atay.jpg" style="width: 100%" />
+            <img src="<?= base_url('assets/images/m4.jpg'); ?>" src="images/atay.jpg" style="width: 100%" />
             <div class="text">Caption Two</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="<?= base_url('assets/images/kotubai.jpg'); ?>" style="width: 100%" />
+            <img src="<?= base_url('assets/images/m5.jpg'); ?>" style="width: 100%" />
             <div class="text">Caption Three</div>
           </div>
 
@@ -91,34 +92,34 @@
     <!-- Featured Activities Grid -->
    
     <section class="activities">
-  <h2>Top Activities in Chefchaouen</h2>
+  <h2>Top Activities in Marzouga</h2>
   <div class="activity-grid">
     <!-- Activity 1 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 1" />
+      <img src="<?= base_url('assets/images/marzouga.jpg'); ?>" alt="Activity 1" />
       <div class="activity-info">
         <h3>Activity 1</h3>
-        <p>Explore the stunning Medina and its historic souks.</p>
+        <p>Breakfast in the desert <strong>$75.44</strong>  .</p>
         <button class="activity-btn" data-target="activity-details-1">Learn More</button>
       </div>
     </div>
 
     <!-- Activity 2 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 2" />
+      <img src="<?= base_url('assets/images/4a.jpg'); ?>" alt="Activity 2" />
       <div class="activity-info">
         <h3>Activity 2</h3>
-        <p>Discover the vibrant streets of Chefchaouen.</p>
+        <p>Camel Trekking <strong>$55.44</strong> .</p>
         <button class="activity-btn" data-target="activity-details-2">Learn More</button>
       </div>
     </div>
 
     <!-- Activity 3 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/souk.jpg'); ?>" alt="Activity 3" />
+      <img src="<?= base_url('assets/images/cc.jpg'); ?>" alt="Activity 3" />
       <div class="activity-info">
         <h3>Activity 3</h3>
-        <p>Visit the enchanting Jardin Majorelle.</p>
+        <p>Merzouga 4x4 tour - Excursion around dunes <strong>$35.9</strong>.</p>
         <button class="activity-btn" data-target="activity-details-3">Learn More</button>
       </div>
     </div>
@@ -128,24 +129,26 @@
 <!-- Overlays for Activity Details -->
 <div id="activity-details-1" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 1 Details</h3>
-    <p>More information about Activity 1...</p>
+    <h3> Desert Discovery</h3>
+    <p>Head into Morocco's Sahara Desert on a camel and watch the sun set over the Erg Chebbi Dunes. This overnight tour offers spectacular views and a chance to experience the desert nomad lifestyle. Eat a traditional Moroccan tagine, take part in a drum circle, and sleep in an authentic Berber tent. See and search for desert reptiles and mammals as you trek.</p>
     <button onclick="hideDetails('activity-details-1')">Close</button>
   </div>
 </div>
 
 <div id="activity-details-2" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 2 Details</h3>
-    <p>More information about Activity 2...</p>
+    <h3>Camel Trekking </h3>
+    <p>Camel Trekking & 1 Night in Desert Camp is a tour to the Sahara Desert everyone should have at least once in their lifetime, it is a trip like no other with landscapes and views that most will only see in movies!.</p>
     <button onclick="hideDetails('activity-details-2')">Close</button>
   </div>
 </div>
 
 <div id="activity-details-3" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 3 Details</h3>
-    <p>More information about Activity 3...</p>
+    <h3>Merzouga 4x4 tour - Excursion around dunes</h3>
+    <p>Explore the dunes of Erg Chebbi in the Sahara Desert and visit Berber communities along the way with this activity. Your driver will pick you up at your Merzouga hotel and take you out to Erg Chebbi, where you'll get the chance to ride around on the sweeping golden dunes in a 4x4 vehicle. You'll also meet local people and learn about their way of life.
+
+</p>
     <button onclick="hideDetails('activity-details-3')">Close</button>
   </div>
 </div>
@@ -158,15 +161,13 @@
       <div class="map-placeholder">
         <!-- Insert interactive map here -->
         <p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217405.76170972027!2d-8.172668694402377!3d31.63480793522482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakech!5e0!3m2!1sfr!2sma!4v1731270854531!5m2!1sfr!2sma"
-            width="800"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54672.372889980354!2d-4.055538327405372!3d31.081278711415795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd973c279834dfe5%3A0x5639fab2b5de4a44!2sMerzouga!5e0!3m2!1sfr!2sma!4v1732899274629!5m2!1sfr!2sma" 
+          width="800"
             height="300"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+           referrerpolicy="no-referrer-when-downgrade"></iframe>
         </p>
       </div>
     </section>
@@ -196,6 +197,12 @@
         let kech = document.getElementById("home");
         kech.addEventListener("click", function () {
           window.location.assign("home1");
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        let res = document.getElementById("reser");
+        res.addEventListener("click", function () {
+          window.location.assign("reservation");
         });
       });
     </script>

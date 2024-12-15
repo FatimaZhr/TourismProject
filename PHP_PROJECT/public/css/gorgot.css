@@ -40,15 +40,13 @@ form{
 h2{
     font-size: 2rem;
     margin-bottom: 2px solid #013ca1;
-    color: whitesmoke;
+    color: #013ca1;
 }
 
 .input-text {
     position: relative;
     border-bottom: 2px solid #013ca1;
     margin: 15px 0;
-    
- 
 }
 
 .input-text label {
@@ -60,7 +58,6 @@ h2{
     font-size: 16px;
     pointer-events: none;
     transition: 0.15s ease;
-
 }
 
 .input-text input {
@@ -71,7 +68,6 @@ h2{
     outline: none;
     font-size: 16;
     color: azure;
-    padding: 10px;
 }
 
 

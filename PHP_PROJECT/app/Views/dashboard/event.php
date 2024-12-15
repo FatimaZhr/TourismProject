@@ -1,6 +1,5 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +13,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
    
 </head>
-
 <body>
     <main class="table" id="ev_table">
         <section class="table__header">
@@ -62,18 +60,14 @@
             <td><?= esc($evenement['date']); ?></td>
             
             <td><?= esc($evenement['lieu']); ?></td>
-            <td><?= esc($evenement['description']); ?></td>
             <td><?= esc($evenement['organisateur']); ?></td>
             
             <td><?= esc($evenement['status']); ?></td>
             <td><?= esc($evenement['capacite']); ?></td>
             <td class="ddd">
-            <form action="<?= base_url('edit_event') ?>" method="get">
-    <input type="hidden" name="id" value="<?= $evenement['id'] ?>">
-    <button class="status Edit">
-        <i class="fa-regular fa-pen-to-square"></i> Edit
-    </button>
-</form>
+                <button class="status Edit">
+                    <i class="fa-regular fa-pen-to-square"> </i> &nbsp; Edit
+                </button>
                 <button class="status Delete" onclick="deleteEvent(<?= esc($evenement['id']) ?>)">
     <span class="material-symbols-outlined">delete</span> Delete
 </button>
@@ -83,7 +77,6 @@
 <?php else: ?>
     <tr><td colspan="10">Aucun événement trouvé.</td></tr>
 <?php endif; ?>
-
 <script>
         
 function deleteEvent(id) {
@@ -94,7 +87,6 @@ function deleteEvent(id) {
 </script>
         </tbody>
             </table>
-
         </section>
      
         <a  href="\dashboard" class=" btn"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;log out</a>
@@ -103,10 +95,7 @@ function deleteEvent(id) {
     <script src="js/event.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-
-
 </body>
          </html>

@@ -64,7 +64,6 @@ button {
   position: relative;
   width: 120px;
   padding: 0.5px;
-  margin-left: 4rem;
   background: transparent;
   border-radius: 10px;
   border: 2px solid #043c4a;
@@ -83,4 +82,7 @@ button:hover {
 }
 button:active {
   transform: scale(0.95);
+}
+.btn {
+  text-align: center;
 }

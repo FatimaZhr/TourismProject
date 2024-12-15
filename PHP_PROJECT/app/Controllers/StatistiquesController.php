@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Modules\Statistiques\Controllers;
-
 use App\Controllers\BaseController;
 use App\Modules\Statistiques\Models\StatistiquesModel;
-
 class StatistiquesController extends BaseController
 {
     public function index()

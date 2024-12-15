@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chefchaouen - City Attractions</title>
+    <title>fez - City Attractions</title>
 
     <link
       rel="stylesheet"
@@ -17,21 +17,23 @@
     <header class="city-header">
       <img
 
-        src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>" 
+        src="<?= base_url('assets/images/fez.jpg'); ?>" 
         alt="Marrakech"
         class="banner-image"
       />
       <div class="header-text">
-        <h1>Casa Blanca</h1>
-        <p>Discover the beauty, history, and vibrant life of chefchaouen.</p>
+        <h1>Fez (Fass)</h1>
+        <p>Discover the beauty, history, and vibrant life of fez.</p>
         <div class="btn">
-          <button>reservation</button>
+          <button id="reser">reservation</button>
+          <form action="<?=base_url('home1')?>">
           <button id="home">back to cities</button>
+          </form>
         </div>
       </div>
     </header>
 
-    <div class="h1"><h1>Top Atractive places in Marrakech</h1></div>
+    <div class="h1"><h1>Top Atractive places in Fez</h1></div>
 
     <!-- Main Content Section -->
     <div class="container">
@@ -64,19 +66,20 @@
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>"  style="width: 100%" />
+            <img         src="<?= base_url('assets/images/fez.jpg'); ?>" 
+            style="width: 100%" />
             <div class="text">Caption Text</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="<?= base_url('assets/images/atay.jpg'); ?>" src="images/atay.jpg" style="width: 100%" />
+            <img src="<?= base_url('assets/images/attarin.webp'); ?>"  style="width: 100%" />
             <div class="text">Caption Two</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="<?= base_url('assets/images/kotubai.jpg'); ?>" style="width: 100%" />
+            <img src="<?= base_url('assets/images/IMG_4775.jpg'); ?>" style="width: 100%" />
             <div class="text">Caption Three</div>
           </div>
 
@@ -91,11 +94,11 @@
     <!-- Featured Activities Grid -->
    
     <section class="activities">
-  <h2>Top Activities in Chefchaouen</h2>
+  <h2>Top Activities in Fes</h2>
   <div class="activity-grid">
     <!-- Activity 1 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 1" />
+      <img src="<?= base_url('assets/images/seffarin.jpeg'); ?>" ?>
       <div class="activity-info">
         <h3>Activity 1</h3>
         <p>Explore the stunning Medina and its historic souks.</p>
@@ -105,10 +108,10 @@
 
     <!-- Activity 2 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 2" />
+      <img src="<?= base_url('assets/images/babFas.JPEG'); ?>" alt="Activity 2" />
       <div class="activity-info">
         <h3>Activity 2</h3>
-        <p>Discover the vibrant streets of Chefchaouen.</p>
+        <p>Discover the vibrant streets of fes.</p>
         <button class="activity-btn" data-target="activity-details-2">Learn More</button>
       </div>
     </div>
@@ -158,15 +161,7 @@
       <div class="map-placeholder">
         <!-- Insert interactive map here -->
         <p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217405.76170972027!2d-8.172668694402377!3d31.63480793522482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakech!5e0!3m2!1sfr!2sma!4v1731270854531!5m2!1sfr!2sma"
-            width="800"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105816.68568414477!2d-5.084142895362299!3d34.02407765245573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b484d445777%3A0x10e6aaaeedd802ef!2zRsOocw!5e0!3m2!1sfr!2sma!4v1732899649689!5m2!1sfr!2sma" width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </p>
       </div>
     </section>
@@ -196,6 +191,12 @@
         let kech = document.getElementById("home");
         kech.addEventListener("click", function () {
           window.location.assign("home1");
+        });
+      });
+      document.addEventListener("DOMContentLoaded", function () {
+        let res = document.getElementById("reser");
+        res.addEventListener("click", function () {
+          window.location.assign("reservation");
         });
       });
     </script>

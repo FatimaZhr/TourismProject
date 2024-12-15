@@ -38,6 +38,7 @@
           padding: 20px 0;
           margin: 0;
           flex-wrap: wrap;
+          
         }
         .socialIcons {
           display: flex;

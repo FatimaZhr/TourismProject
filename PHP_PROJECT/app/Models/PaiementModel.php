@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Modules\Paiement\Models;
-
 use CodeIgniter\Model;
-
 class PaiementModel extends Model
 {
     protected $table = 'Paiement';

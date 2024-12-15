@@ -1,98 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Form-v4 by Colorlib</title>
-	<!-- Mobile Specific Metas -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!-- Font-->
-	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
-	<link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
-	<!-- Jquery -->
-	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
-	<!-- Main Style Css -->
-    <link rel="stylesheet" href="css/sign.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            background-image: url(../images/kotubai.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 150vh;
+  filter: brightness(0.9);
+  opacity: 0.5px;
+  position: relative;
+        }
+        .form{
+   background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  width: 500px;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 10; /* Higher z-index to ensure it appears on top */
+  position: fixed; /* Enables placement over the header */
+  top: 40%; /* Adjust this to move the card vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Centers the card */
+  border-radius: 10px; /* Optional: adds rounded corners */
+  margin-bottom;        }
+
+        button {
+  position: relative;
+  width: 150px;
+  padding: 0.5px;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid #043c4a;
+  outline: 2px solid #cf883b;
+  outline-offset: -2px;
+  font-size: 1rem;
+  color: white;
+  background-color: #cf883b;
+  cursor: pointer;
+  transition: outline-offset 200ms ease;
+  margin:1rem;
+  padding: 0.75rem;
+}
+button:hover {
+  color: #e0ffff;
+  outline-offset: 3px;
+  background-color: #043c4a;
+}
+button:active {
+  transform: scale(0.95);
+}
+label {
+  color: rgb(225, 159, 17);
+  padding: 0.75rem;
+}
+
+   input {
+    background-color: purple;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin:1rem;
+
+}
+h2{
+ text-align: center;
+}
+.btn{
+    text-align: center;
+}
+    </style>
 </head>
-<body class="form-v4">
+<body>
+    
+<div class="form">
+<h2>Login</h2>
+<form method="post" action="<?= site_url('auth/login'); ?>">
+    <label for="email">Email:</label>
+    <input type="email" name="email" required>
 
-	<div class="page-content">
-		<div class="form-v4-content">
-
-			<div class="form-left">
-			<h2>Welcome Back!</h2>
-<p class="text-1">
-    Access your account to continue planning your dream vacations, managing bookings, and exploring personalized recommendations.
-</p>
-<p class="text-2">
-    <span>Stay Connected:</span> Log in to stay updated on exclusive deals, offers, and your travel itinerary. Your next adventure awaits!
-</p>
-<div class="form-left-last">
-				<form action="<?= base_url('sign') ?>" method="get">
-        <input type="submit" name="account" class="account" value="Sign in">
+    <label for="password">Password:</label>
+    <input type="password" name="password" required>
+<div class="btn">
+    <button type="submit">Login</button>
+    <form action=<?= base_url('home/home1'); ?>>
+    <button id="home">Back to home</button>
     </form>
-</div>
-			</div>
-			<form class="form-detail" action="<?= base_url('sign/register') ?>" method="post" id="myform">
-                	<h2>Sign in </h2>
-				
-				<div class="form-row">
-					<label for="your_email"> Email</label>
-					<input type="text" name="your_email" id="your_email" class="input-text" required ">
-				</div>
-				<div class="form-row">
-					<label for="your_email">Password</label>
-					<input type="password" name="password" id="password" class="input-text" required ">
-				</div>
+    </div>
+<a href="http://">Forget Password?</a>
+    </div>
+</form>
 
-				<div class="form-checkbox">
-					<label class="container"><a href="<?= base_url('/forgot_password') ?>" class="text">Forgot password</a>
-					  	<input type="checkbox" name="checkbox">
-					</label>
-				</div>
-				<div class="form-row-last">
-					<input type="submit" name="register" class="register" value="Sign in">
-				</div>
-				
-			</form>
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-	<script>
-		// just for the demos, avoids form submit
-		jQuery.validator.setDefaults({
-		  	debug: true,
-		  	success:  function(label){
-        		label.attr('id', 'valid');
-   		 	},
-		});
-		$( "#myform" ).validate({
-		  	rules: {
-			    password: "required",
-		    	comfirm_password: {
-		      		equalTo: "#password"
-		    	}
-		  	},
-		  	messages: {
-		  		first_name: {
-		  			required: "Please enter a firstname"
-		  		},
-		  		last_name: {
-		  			required: "Please enter a lastname"
-		  		},
-		  		your_email: {
-		  			required: "Please provide an email"
-		  		},
-		  		password: {
-	  				required: "Please enter a password"
-		  		},
-		  		comfirm_password: {
-		  			required: "Please enter a password",
-		      		equalTo: "Wrong Password"
-		    	}
-		  	}
-		});
-	</script>
-</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</body>
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+        let kech = document.getElementById("home");
+        kech.addEventListener("click", function () {
+          window.location.assign("home1");
+        });
+      });
+</script>
+
 </html>

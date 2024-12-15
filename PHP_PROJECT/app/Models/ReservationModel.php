@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Models;
-
 use CodeIgniter\Model;
-
 class ReservationModel extends Model
 {
     protected $table = 'reservations'; // Nom de la table
@@ -17,7 +14,6 @@ class ReservationModel extends Model
         'statut',
     ]; 
    
-
     public function getReservations()
     {
         // Join with 'touriste' and 'attractions' tables to get names
@@ -25,16 +21,12 @@ class ReservationModel extends Model
         $builder->select('reservations.*, touriste.nom AS touriste_name, attractions.nom AS attraction_name');
         $builder->join('touriste', 'touriste.touriste_id = reservations.touriste_id', 'left');
         $builder->join('attractions', 'attractions.id = reservations.attraction_id', 'left'); // Corrected join condition
-
         return $builder->get()->getResultArray();
     }
-
     public function getLast24hCount()
     {
      
     }
-
-
     public function delete($id = null, bool $purge = false)
     {
         // Suppression basée sur l'ID fourni
@@ -44,10 +36,8 @@ class ReservationModel extends Model
     
         return false; // Pas d'ID fourni, rien à supprimer
     }// Colonnes modifiables
-
     // Activez les timestamps si nécessaire
     protected $useTimestamps = false;
-
     // Exemple de méthode pour récupérer les détails complets d'une réservation
     public function getReservationDetails($id)
     {

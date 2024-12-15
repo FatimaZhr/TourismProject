@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Modules\Statistiques\Models;
-
 use CodeIgniter\Model;
-
 class StatistiquesModel extends Model
 {
     protected $table = 'statistiques';

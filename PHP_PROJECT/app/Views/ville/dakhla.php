@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chefchaouen - City Attractions</title>
+    <title>dakhla - City Attractions</title>
 
     <link
       rel="stylesheet"
@@ -17,21 +17,22 @@
     <header class="city-header">
       <img
 
-        src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>" 
+        src="<?= base_url('assets/images/photo1jpg.jpg'); ?>" 
         alt="Marrakech"
         class="banner-image"
       />
       <div class="header-text">
-        <h1>Casa Blanca</h1>
-        <p>Discover the beauty, history, and vibrant life of chefchaouen.</p>
+        <h1>Dakhla</h1>
+        <p>Discover the beauty, history, and vibrant life of Dakhla.</p>
         <div class="btn">
           <button id="reser" >reservation</button>
+ <form action="<?=base_url('home1')?>">
           <button id="home">back to cities</button>
-        </div>
+          </form>        </div>
       </div>
     </header>
 
-    <div class="h1"><h1>Top Atractive places in Marrakech</h1></div>
+    <div class="h1"><h1>Top Atractive places in Dakhla</h1></div>
 
     <!-- Main Content Section -->
     <div class="container">
@@ -64,19 +65,19 @@
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>"  style="width: 100%" />
+            <img src="<?= base_url('assets/images/dkhl.jpg'); ?>"  style="width: 100%" />
             <div class="text">Caption Text</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="<?= base_url('assets/images/atay.jpg'); ?>" src="images/atay.jpg" style="width: 100%" />
+            <img src="<?= base_url('assets/images/dkhl2.jpg'); ?>" style="width: 100%" />
             <div class="text">Caption Two</div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="<?= base_url('assets/images/kotubai.jpg'); ?>" style="width: 100%" />
+            <img src="<?= base_url('assets/images/dkhl3.jpg'); ?>" style="width: 100%" />
             <div class="text">Caption Three</div>
           </div>
 
@@ -95,30 +96,30 @@
   <div class="activity-grid">
     <!-- Activity 1 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 1" />
+      <img src="<?= base_url('assets/images/dkhl3.jpg'); ?>" alt="Activity 1" />
       <div class="activity-info">
-        <h3>Activity 1</h3>
-        <p>Explore the stunning Medina and its historic souks.</p>
+      <h3>Activity 1 <strong>from $80</strong></h3>
+      <p>white dunes.</p>
         <button class="activity-btn" data-target="activity-details-1">Learn More</button>
       </div>
     </div>
 
     <!-- Activity 2 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 2" />
+      <img src="<?= base_url('assets/images/dkhl2.jpg'); ?>" alt="Activity 2" />
       <div class="activity-info">
-        <h3>Activity 2</h3>
-        <p>Discover the vibrant streets of Chefchaouen.</p>
+      <h3>Activity 2 <strong>from $36.9</strong></h3>
+      <p>boat trip.</p>
         <button class="activity-btn" data-target="activity-details-2">Learn More</button>
       </div>
     </div>
 
     <!-- Activity 3 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/souk.jpg'); ?>" alt="Activity 3" />
+      <img src="<?= base_url('assets/images/bike-dakhla-maroc.jpg'); ?>" alt="Activity 3" />
       <div class="activity-info">
-        <h3>Activity 3</h3>
-        <p>Visit the enchanting Jardin Majorelle.</p>
+      <h3>Activity 3 <strong>from $35.9</strong></h3>
+      <p>Walking in the desert.</p>
         <button class="activity-btn" data-target="activity-details-3">Learn More</button>
       </div>
     </div>
@@ -128,16 +129,16 @@
 <!-- Overlays for Activity Details -->
 <div id="activity-details-1" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 1 Details</h3>
-    <p>More information about Activity 1...</p>
+    <h3>white dunes</h3>
+    <p>Among the natural sights of Dakhla, we can mention the white dune. It is a white sand dune in the shape of a crescent. At high tide, it turns into an island. To date, this phenomenon remains a real mystery. There is no reliable scientific data or theory to explain this. There are two ways to visit the white dune, in a 4x4 or during kitesurfing trips. Many hotels in the region offer this excursion to their guests..</p>
     <button onclick="hideDetails('activity-details-1')">Close</button>
   </div>
 </div>
 
 <div id="activity-details-2" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 2 Details</h3>
-    <p>More information about Activity 2...</p>
+    <h3>boat trip</h3>
+    <p>If you are not too excited about a boat trip, you can always visit Dragon Island. At low tide, it is possible to walk there. This walk will also be an opportunity for you to admire the ballet of kitesurfers and dolphins. As with the boat trip, pink flamingos and other migratory birds will serve as your welcoming committee.</p>
     <button onclick="hideDetails('activity-details-2')">Close</button>
   </div>
 </div>
@@ -145,7 +146,7 @@
 <div id="activity-details-3" class="details-overlay">
   <div class="details-content">
     <h3>Activity 3 Details</h3>
-    <p>More information about Activity 3...</p>
+    <p>For those who enjoy cycling, there are excursions in the desert on electric mountain bikes. Even those who are not experienced cyclists can take this bike ride in the desert. The advantage of the electric bicycle is that it reduces the pedalling effort. When you climb the dunes, etc., the engine takes over, to allow you to rest your calf. The interest of the bike ride is that you are as close as possible to nature. You could better admire the lunar landscapes of this desert terrain.</p>
     <button onclick="hideDetails('activity-details-3')">Close</button>
   </div>
 </div>
@@ -158,15 +159,7 @@
       <div class="map-placeholder">
         <!-- Insert interactive map here -->
         <p>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217405.76170972027!2d-8.172668694402377!3d31.63480793522482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdafee8d96179e51%3A0x5950b6534f87adb8!2sMarrakech!5e0!3m2!1sfr!2sma!4v1731270854531!5m2!1sfr!2sma"
-            width="800"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116901.49981577344!2d-16.027979032177214!3d23.705555724790894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc2248393aa06243%3A0x2572dbf2ee5f0172!2sDakhla%2073000!5e0!3m2!1sfr!2sma!4v1732899759605!5m2!1sfr!2sma" width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </p>
       </div>
     </section>

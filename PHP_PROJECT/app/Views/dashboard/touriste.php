@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css" integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
-
+   
 </head>
-
 <body>
     <main class="table" id="Tourist_table">
         <section class="table__header">
@@ -47,13 +45,12 @@
                        <th> </th>
                         <th> </th>
                         <th> </th>
-
-
+                   
                     </tr>
                 </thead>
                 <tbody >
-
-
+                   
+             
                 <?php if (!empty($touristes)): ?>
     <?php foreach ($touristes as $touriste): ?>
         <tr>
@@ -65,28 +62,25 @@
             <td><?= esc($touriste['ville']) ?></td>
             <td><?= esc($touriste['pays']) ?></td>
           <td class="ddd">
-
-
-          <form action="<?= base_url('edit_touriste') ?>" method="get">
-    <input type="hidden" name="id" value="<?= $touriste['touriste_id'] ?>">
-    <button class="status Edit">
-        <i class="fa-regular fa-pen-to-square"></i> Edit
-    </button>
-</form>
+                           
+                        
+                            <form action=" <?= base_url('edit_touriste/' . $touriste['touriste_id']) ?>" method="get">
+                            <button class="status Edit">
+                            <i class="fa-regular fa-pen-to-square"> </i> &nbsp; Edit
+                          </button>
+                            </form>
 <button class="status Delete" onclick="deleteTouriste(<?= esc($touriste['touriste_id']) ?>)">
     <span class="material-symbols-outlined">delete</span> Delete
 </button>
                         </td>
-
+                     
         </tr>
     <?php endforeach; ?>
 <?php else: ?>
     <tr><td colspan="11">Aucun touriste trouvé.</td></tr>
 <?php endif; ?>
-
       </tbody>
             </table>
-
         </section>
      
         <a  href="\dashboard" class=" btn"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;&nbsp;log out</a>
@@ -98,16 +92,11 @@ function deleteTouriste(id) {
         window.location.href = `/touriste/delete/${id}`;
     }
 }
-
-
 </script>
     <script src="js/touriste.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-
 </body>
-
 </html>

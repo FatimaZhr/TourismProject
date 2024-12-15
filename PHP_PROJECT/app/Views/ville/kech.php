@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>chefchaouen - City Attractions</title>
+    <title>marrakech - City Attractions</title>
 
     <link
       rel="stylesheet"
@@ -17,16 +17,18 @@
     <header class="city-header">
       <img
 
-        src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>" 
+        src="<?= base_url('assets/images/atay.jpg'); ?>" 
         alt="Marrakech"
         class="banner-image"
       />
       <div class="header-text">
-        <h1>Casa Blanca</h1>
-        <p>Discover the beauty, history, and vibrant life of chefchaouen.</p>
+        <h1>Marrakech</h1>
+        <p>Discover the beauty, history, and vibrant life of marrakech.</p>
         <div class="btn">
-          <button>reservation</button>
+          <button id="reser">reservation</button>
+          <form action="<?=base_url('home1')?>">
           <button id="home">back to cities</button>
+          </form>
         </div>
       </div>
     </header>
@@ -64,7 +66,7 @@
           <!-- Full-width images with number and caption text -->
           <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="<?= base_url('assets/images/mosquée hassan II.jpg'); ?>"  style="width: 100%" />
+            <img src="<?= base_url('assets/images/jmaF1.jpeg'); ?>"  style="width: 100%" />
             <div class="text">Caption Text</div>
           </div>
 
@@ -88,16 +90,15 @@
       </div>
     </div>
 
-    <!-- Featured Activities Grid -->
    
     <section class="activities">
-  <h2>Top Activities in Chefchaouen</h2>
+  <h2>Top Activities in marrakech</h2>
   <div class="activity-grid">
     <!-- Activity 1 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 1" />
+      <img src="<?= base_url('assets/images/sou9.jpg'); ?>" alt="Activity 1" />
       <div class="activity-info">
-        <h3>Activity 1</h3>
+      <h3>Activity 1 <strong>from $80</strong></h3>
         <p>Explore the stunning Medina and its historic souks.</p>
         <button class="activity-btn" data-target="activity-details-1">Learn More</button>
       </div>
@@ -105,19 +106,19 @@
 
     <!-- Activity 2 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/jm1.jpg'); ?>" alt="Activity 2" />
+      <img src="<?= base_url('assets/images/madrasa.webp'); ?>" alt="Activity 2" />
       <div class="activity-info">
-        <h3>Activity 2</h3>
-        <p>Discover the vibrant streets of Chefchaouen.</p>
+      <h3>Activity 2 <strong>from $20</strong></h3>
+        <p>Discover hestorical ben youssef madrasa.</p>
         <button class="activity-btn" data-target="activity-details-2">Learn More</button>
       </div>
     </div>
 
     <!-- Activity 3 -->
     <div class="activity-card">
-      <img src="<?= base_url('assets/images/souk.jpg'); ?>" alt="Activity 3" />
+      <img src="<?= base_url('assets/images/jm2.jpg'); ?>" alt="Activity 3" />
       <div class="activity-info">
-        <h3>Activity 3</h3>
+      <h3>Activity 3 <strong>from $90</strong></h3>
         <p>Visit the enchanting Jardin Majorelle.</p>
         <button class="activity-btn" data-target="activity-details-3">Learn More</button>
       </div>
@@ -128,24 +129,24 @@
 <!-- Overlays for Activity Details -->
 <div id="activity-details-1" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 1 Details</h3>
-    <p>More information about Activity 1...</p>
+    <h3> Souk Semmarine</h3>
+    <p>Souk Semmarine is a very colorful shopping alley where you can mainly find merchants of fabrics, souvenirs, crafts but also unique addresses of Moroccan antiques. It represents the entrance to the specialized souks: spices, carpets, fabrics, slippers ... A real Ali Baba's cave..</p>
     <button onclick="hideDetails('activity-details-1')">Close</button>
   </div>
 </div>
 
 <div id="activity-details-2" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 2 Details</h3>
-    <p>More information about Activity 2...</p>
+    <h3>Ben Youssef Madrasa</h3>
+    <p>The Ben Youssef Madrasa, an architectural treasure nestled in the heart of the old Medina of Marrakech, echoes a glorious past and embodies inestimable historical significance. It transports visitors to a fascinating era where art, knowledge and culture flourished. The Ben Youssef Madrasa was built by Sultan Abdullah Al-Ghaleb Assaadi between the years 1564 and 1565…</p>
     <button onclick="hideDetails('activity-details-2')">Close</button>
   </div>
 </div>
 
 <div id="activity-details-3" class="details-overlay">
   <div class="details-content">
-    <h3>Activity 3 Details</h3>
-    <p>More information about Activity 3...</p>
+    <h3>jardin Majorelle..</h3>
+    <p>French fashion designer Yves Saint Laurent and his partner Pierre Bergé bought Jardin Majorelle in 1980 to preserve the vision of its original owner, French landscape painter Jacques Majorelle, and keep it open to the public. The garden, started in 1924, contains a psychedelic desert mirage of 300 plant species from five continents. At its heart lies Majorelle's electric-blue art deco studio, home to the Musée Berbère, which showcases the rich panorama of Morocco's indigenous inhabitants through displays of some 600 artifacts.</p>
     <button onclick="hideDetails('activity-details-3')">Close</button>
   </div>
 </div>
@@ -196,6 +197,13 @@
         let kech = document.getElementById("home");
         kech.addEventListener("click", function () {
           window.location.assign("home1");
+        });
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        let res = document.getElementById("reser");
+        res.addEventListener("click", function () {
+          window.location.assign("reservation");
         });
       });
     </script>

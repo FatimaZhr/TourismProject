@@ -1,9 +1,6 @@
 <?php
-
 namespace App\Modules\Administrateur\Models;
-
 use CodeIgniter\Model;
-
 class AdministrateurModel extends Model
 {
     protected $table = 'Administrateur';

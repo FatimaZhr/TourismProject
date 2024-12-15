@@ -1,10 +1,7 @@
 <?php
-
 namespace App\Modules\Administrateur\Controllers;
-
 use App\Controllers\BaseController;
 use App\Modules\Administrateur\Models\AdministrateurModel;
-
 class AdministrateurController extends BaseController
 {
     public function index()
